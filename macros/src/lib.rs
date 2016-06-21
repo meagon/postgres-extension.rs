@@ -4,13 +4,14 @@
 extern crate syntax;
 extern crate syntax_ext;
 extern crate rustc;
-extern crate rustc_front;
+// extern crate rustc_front;
 extern crate rustc_plugin;
 
 use rustc_plugin::Registry;
 use syntax::ext::base::{MultiDecorator, MultiModifier};
 use syntax::parse::token::intern;
-use rustc::front::map::blocks::MaybeFnLike;
+use rustc::hir::map::blocks::MaybeFnLike;
+use rustc::hir::ItemFn;
 
 use syntax::ext::base::{ExtCtxt, Annotatable};
 use syntax::codemap::Span;
